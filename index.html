@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventaris Barang — SMAN 1 Kamal Bangkalan</title>
+<meta name="description" content="Aplikasi Inventaris Barang SMAN 1 Kamal Bangkalan">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://script.google.com">
+<link rel="preconnect" href="https://script.googleusercontent.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20261028b">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+
+<div class="loading-bar" id="loadingBar"></div>
+
+<!-- ======================= LOGIN ======================= -->
+<div id="login-screen">
+  <div class="login-bg-decor" aria-hidden="true">
+    <img src="assets/logo-sman1kamal.png" alt="" class="login-bg-watermark">
+    <div class="login-bg-glow"></div>
+  </div>
+  <div class="login-card">
+    <img src="assets/logo-sman1kamal.png" alt="Logo SMAN 1 Kamal Bangkalan" class="login-logo">
+    <span class="badge" style="margin-top:14px;background:var(--light-blue);color:var(--primary);border-color:var(--light-blue-2)">SIM SARANA PRASARANA</span>
+    <h1>Inventaris Barang</h1>
+    <p>Portal resmi tata kelola aset & BHP — SMAN 1 Kamal Bangkalan. Masuk dengan akun Google instansi yang terdaftar.</p>
+    <div id="gsi-button-container"></div>
+    <div id="login-msg" class="login-msg"></div>
+  </div>
+</div>
+
+<!-- ======================= APP SHELL ======================= -->
+<div id="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-row">
+        <img src="assets/logo-sman1kamal.png" alt="" class="brand-logo">
+        <div class="brand-text">
+          <span class="name">SIM INVENTARIS BARANG</span>
+          <span class="sub">SMAN 1 Kamal Bangkalan</span>
+        </div>
+      </div>
+      <div class="role-pill"><span id="rolePillText">—</span></div>
+    </div>
+    <nav id="navMenu"></nav>
+    <div class="foot">
+      <button type="button" id="btnLogout">Keluar Sistem</button>
+      <div class="ver">v2.0 · Blueprint Inventory · GAS + Sheets</div>
+    </div>
+  </aside>
+
+  <header class="topbar">
+    <button id="btnBurger" class="btn btn-secondary btn-sm" style="display:none">☰</button>
+    <div class="crumb"><span>SIM SARPRAS</span><span>/</span><b id="crumbPage">Dashboard</b></div>
+    <div class="who">
+      <div>
+        <span class="nm" id="whoName">—</span>
+        <span class="rl" id="whoRole">—</span>
+      </div>
+      <div class="avatar" id="whoAvatar">?</div>
+    </div>
+  </header>
+
+  <main class="content" id="pageMount"><!-- halaman dirender di sini oleh js/app.js --></main>
+</div>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-head">
+      <h3 id="modalTitle">Form</h3>
+      <button type="button" id="modalClose">&times;</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-foot" id="modalFoot"></div>
+  </div>
+</div>
+
+<div class="toast-wrap" id="toastWrap"></div>
+
+<script src="js/vendor/qrcode.min.js?v=20261028b" defer></script>
+<script src="js/config.js?v=20261028b" defer></script>
+<script src="js/api.js?v=20261028b" defer></script>
+<script src="js/ui.js?v=20261028b" defer></script>
+<script src="js/pages.js?v=20261028b" defer></script>
+<script src="js/app.js?v=20261028b" defer></script>
+</body>
+</html>
